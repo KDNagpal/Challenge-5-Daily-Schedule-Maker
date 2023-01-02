@@ -1,3 +1,17 @@
+
+
+var update = function () {
+    day = moment(new Date())
+    timeDisplay.html(day.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+};
+
+$(document).ready(function(){
+    timeDisplay = $('#currentDay')
+    update();
+    setInterval(update, 1000);
+});
+
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
