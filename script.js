@@ -61,3 +61,11 @@ const clearBtn = document.querySelector("#remove");
     localStorage.clear();
     location.reload();
   });
+
+  $(document).ready(function() {
+    $(".description").each(function() {
+      var textarea = $(this);
+      var id = textarea.data("hour");
+      textarea.val(localStorage.getItem(id));
+    });
+  });
